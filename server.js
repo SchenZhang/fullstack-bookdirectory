@@ -400,7 +400,7 @@ const errorhandler = (err, req, res, next) => {
 
 app.use(notfound);
 app.use(errorhandler);
-
-app.listen(7000, () => {
+const Port = process.env.Port || 7000;
+app.listen(Port, () => {
   console.log("Server is up");
 });
